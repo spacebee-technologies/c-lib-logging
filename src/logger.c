@@ -2,7 +2,7 @@
 
 #include "zephyr_logger.h"
 
-void Logger_init() {
+void Logger_init(LoggerLevel_t level) {
   ZephyrLogger_init();
   ULOG_INIT();
   ULOG_SUBSCRIBE(ZephyrLogger_send, ULOG_DEBUG_LEVEL);
